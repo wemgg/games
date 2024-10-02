@@ -1,0 +1,13 @@
+local supportedGames = {
+    [123456789] = loadstring(game:HttpGet("https://raw.githubusercontent.com/wemgg/bbl/refs/heads/main/bbl")),
+    [17652853807] = loadstring(game:HttpGet("https://raw.githubusercontent.com/wemgg/bbl/refs/heads/main/bbl")),
+    [5327744466] = loadstring(game:HttpGet("https://raw.githubusercontent.com/wemgg/rbl/refs/heads/main/rbl")),
+}
+
+local currentGameId = game.GameId
+
+if supportedGames[currentGameId] then
+    supportedGames[currentGameId]()
+else
+    game.Players.LocalPlayer:Kick("did i say this game was supported r u ed LOL")
+end
